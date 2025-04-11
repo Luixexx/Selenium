@@ -5,47 +5,95 @@ Incluye capturas de evidencia, reporte HTML, y un video demostrativo.
 
 ---
 
-## 📋 Historias de Usuario
+# Historias de Usuario – Proyecto de Prueba Automatizada con Selenium
 
-### Historia de Usuario 1
+## Historia 1: Iniciar sesión correctamente
 
-**Como** usuario del sistema  
-**Quiero** iniciar sesión correctamente  
-**Para** acceder a los productos disponibles
+**Como** usuario,  
+**quiero** poder iniciar sesión con credenciales válidas  
+**para** acceder a mis productos.\*\*
 
-**Criterios de aceptación:**
+### ✅ Criterios de Aceptación
 
-- Ingresar usuario y contraseña válidos
-- Redirigir al inventario
-- Mostrar productos
+- El sistema permite el acceso si el usuario y contraseña son correctos.
+- La página de productos se muestra tras iniciar sesión.
 
----
+### ❌ Criterios de Rechazo
 
-### Historia de Usuario 2
-
-**Como** usuario del sistema  
-**Quiero** poder ver el detalle de un producto  
-**Para** conocer más información antes de comprar
-
-**Criterios de aceptación:**
-
-- Click sobre el nombre del producto
-- Redirige a la vista de detalle
-- Mostrar botón para agregar al carrito
+- Si los campos están vacíos o incorrectos, se muestra un mensaje de error.
+- El usuario no puede acceder a la siguiente página sin credenciales válidas.
 
 ---
 
-### Historia de Usuario 3
+## Historia 2: Ver el detalle de un producto
 
-**Como** usuario del sistema  
-**Quiero** agregar productos al carrito y verlos  
-**Para** confirmar mi selección antes de pagar
+**Como** comprador,  
+**quiero** ver la información detallada de un producto  
+**para** decidir si lo compro.
 
-**Criterios de aceptación:**
+### ✅ Criterios de Aceptación
 
-- Botón de agregar debe funcionar
-- Click en el ícono del carrito lleva al resumen
-- Producto seleccionado debe estar listado
+- Se puede hacer clic en el nombre de cualquier producto.
+- Se muestra una nueva página con descripción, imagen y precio del producto.
+
+### ❌ Criterios de Rechazo
+
+- Si el producto no carga correctamente, debe mostrarse un mensaje de error.
+- El botón de regreso a la tienda debe estar visible y funcional.
+
+---
+
+## Historia 3: Agregar un producto al carrito
+
+**Como** usuario registrado,  
+**quiero** agregar productos al carrito  
+**para** comprarlos más adelante.
+
+### ✅ Criterios de Aceptación
+
+- El botón “Add to cart” funciona correctamente.
+- El ícono del carrito se actualiza con la cantidad de productos añadidos.
+
+### ❌ Criterios de Rechazo
+
+- Si no hay stock, debe avisar que no se puede agregar.
+- No se puede agregar el mismo producto varias veces desde la misma vista.
+
+---
+
+## Historia 4: Ver el carrito de compras
+
+**Como** comprador,  
+**quiero** ver el contenido del carrito  
+**para** revisar lo que he seleccionado.
+
+### ✅ Criterios de Aceptación
+
+- El carrito muestra todos los productos añadidos.
+- El botón para continuar al checkout debe estar disponible.
+
+### ❌ Criterios de Rechazo
+
+- Si el carrito está vacío, debe indicarse con un mensaje claro.
+- No se debe permitir proceder sin productos seleccionados.
+
+---
+
+## Historia 5: Cerrar sesión
+
+**Como** usuario,  
+**quiero** cerrar sesión desde el menú  
+**para** proteger mi cuenta en equipos compartidos.
+
+### ✅ Criterios de Aceptación
+
+- El botón de logout está accesible desde el menú lateral.
+- Al hacer clic en logout, se redirige correctamente a la página de login.
+
+### ❌ Criterios de Rechazo
+
+- Si hay un error al cerrar sesión, debe notificarse al usuario.
+- El usuario no debe permanecer logueado tras hacer logout.
 
 ---
 
